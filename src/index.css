@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-serif: 'Bodoni Moda', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-arabic: 'Tajawal', 'Cairo', system-ui, sans-serif;
+  }
+
+  html[dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+
+  html[dir="ltr"] {
+    font-family: var(--font-sans);
+  }
+
+  .font-fashion {
+    font-family: var(--font-serif);
+    letter-spacing: -0.02em;
+  }
+
+  .font-arabic-display {
+    font-family: var(--font-arabic);
+  }
+}
+
+/* Python pattern subtle accents */
+.bg-python-pattern {
+  background-color: #FBF9F7;
+  background-image: radial-gradient(rgba(244, 167, 185, 0.12) 1px, transparent 1px), radial-gradient(rgba(18, 18, 20, 0.04) 1px, #FBF9F7 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.bg-python-dark {
+  background-color: #121214;
+  background-image: radial-gradient(rgba(244, 167, 185, 0.08) 1px, transparent 1px), radial-gradient(rgba(255, 255, 255, 0.03) 1px, #121214 1px);
+  background-size: 28px 28px;
+  background-position: 0 0, 14px 14px;
+}
